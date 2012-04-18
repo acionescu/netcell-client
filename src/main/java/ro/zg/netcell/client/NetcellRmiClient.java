@@ -25,7 +25,7 @@ public class NetcellRmiClient extends RmiClient<NetCell> implements NetCell {
 
     public NetcellRmiClient(String host, int port, String objName) {
 	super(host, port, objName);
-	System.out.println("init netcell rmi client (host="+host+" port="+port);
+	System.out.println("init netcell rmi client (host="+host+" port="+port+")");
     }
 
     public CommandResponse execute(Command input) throws Exception {
