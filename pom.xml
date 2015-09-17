@@ -20,7 +20,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>net.segoia</groupId>
    <artifactId>netcell-client</artifactId>
-   <version>0.0.1</version>
+   <version>0.0.2-SNAPSHOT</version>
    <name>netcell-client</name>
    <description>Client library for Netcell ESB</description>
    <url>https://github.com/acionescu/netcell-client</url>
