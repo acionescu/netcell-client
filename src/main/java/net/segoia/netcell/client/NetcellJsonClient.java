@@ -38,7 +38,7 @@ public class NetcellJsonClient extends NetcellSocketClient{
 	String output = null;
 
 	for (Map.Entry<String, String> e : params.entrySet()) {
-	    sb.append(",").append(e.getKey()).append(":").append(e.getValue());
+	    sb.append(",").append(escapeJson(e.getKey())).append(":").append(escapeJson(e.getValue()));
 	}
 	sb.append("}, id:x}\r");
 	try {
@@ -49,6 +49,14 @@ public class NetcellJsonClient extends NetcellSocketClient{
 	    e.printStackTrace();
 	}
 	return stripOutput(output);
+    }
+    
+    private String escapeJson(String json) {
+//	return json.replace(":", "\\:");
+	if(json.matches("[\\[\\{\"].*")) {
+	    return json;
+	}
+	return "\""+json+"\"";
     }
 
     
